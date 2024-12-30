@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+#unity-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+#toyota-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 150px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+#toyota-logo img {
+    width: 100%;
+    height: auto;
+    filter: brightness(1.2);
+}
+
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+#unity-progress-bar-empty {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 100%;
+    background: #E50000;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(229, 0, 0, 0.5);
+}
+
+#loading-text {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#unity-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#unity-warning {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    background: rgba(200, 0, 0, 0.9);
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: none;
+    color: white;
+    font-size: 14px;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #unity-loading-bar {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    #toyota-logo {
+        width: 120px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #toyota-logo {
+        width: 100px;
+        top: 10px;
+    }
+    
+    #loading-text {
+        font-size: 12px;
+    }
+} 
